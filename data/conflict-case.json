@@ -1,0 +1,14 @@
+{
+  "kind": "source-records",
+  "protocol": "sensorthings-api",
+  "collection": "protocol-sample",
+  "source_url": "https://sensor.example.test/v1.1/Observations",
+  "assets": [
+    {
+      "path": "conflict-source.bin",
+      "bytes": 415,
+      "sha256": "86598c658d41c8e491636b0edda1a0a80a194f3e25747898c17018c2a4e7c50e"
+    }
+  ],
+  "calls": []
+}
