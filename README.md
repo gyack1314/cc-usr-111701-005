@@ -13,3 +13,15 @@ python -m capture_data.cli inspect data/normal.json
 Dockerfile 提供 Linux 运行环境；`docker build -t source-capture .` 构建，`docker run --rm source-capture python -m unittest discover -s tests -v` 运行测试。
 
 协议样例可通过 python -m capture_data.cli inspect data/protocol-case.json 查看。该命令仍只说明现有接收能力，不证明远端连续性。
+
+## 受控站点快照采集
+
+`capture_data.snapshot` 在冻结呼叫回放（或真实传输）上执行受控采集，样例均为合成：
+
+```sh
+python -m capture_data.cli snapshot data/snapshot-ok.json        # 闭合站点视图
+python -m capture_data.cli snapshot data/snapshot-token.json     # 令牌失效后按可证明范围重扫
+python -m capture_data.cli snapshot data/snapshot-foreign.json   # 跨源 nextLink 被拒绝，运行保持开放
+```
+
+快照按约定身份（kind + @iot.id + 内容版本）保存 Things、Datastreams、Observations 及关联 Sensor、ObservedProperty；每条观测保留其采集时刻的实体版本。跨源 nextLink 不跟随、凭据不外发；删除、晚到、同 ID 冲突都有显式状态；引用未闭合时只能查询原始观测，得不到伪完整站点。详见 docs/data-contract.md。
