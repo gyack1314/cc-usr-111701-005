@@ -1,18 +1,13 @@
 {
   "kind": "source-records",
+  "protocol": "sensorthings-api",
+  "collection": "sample-005",
   "assets": [
     {
-      "path": "capture.bin",
-      "bytes": 32,
-      "sha256": "8d4822b45635b61a94af37c2be8d8a96acccccdd2c05383752c4ed0bf51012c3"
+      "path": "source.json",
+      "bytes": 915,
+      "sha256": "2d2e623acb1fdefeaf89aef129db6f781d5de145d9a4a65ce3e48f89256fb0c6"
     }
   ],
-  "chunk_lengths": [
-    1,
-    4,
-    7,
-    3,
-    17
-  ],
-  "close_epoch": true
+  "calls": []
 }

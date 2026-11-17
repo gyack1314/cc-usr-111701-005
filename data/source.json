@@ -1,0 +1,52 @@
+{
+  "protocol": "sensorthings-api",
+  "collection": "sample-005",
+  "records": [
+    {
+      "kind": "thing",
+      "id": "thing-1",
+      "version": "v1",
+      "refs": [],
+      "payload": {
+        "source": "synthetic",
+        "position": 0
+      }
+    },
+    {
+      "kind": "datastream",
+      "id": "datastream-2",
+      "version": "v1",
+      "refs": [
+        "thing-1"
+      ],
+      "payload": {
+        "source": "synthetic",
+        "position": 1
+      }
+    },
+    {
+      "kind": "observation",
+      "id": "observation-3",
+      "version": "v1",
+      "refs": [
+        "datastream-2"
+      ],
+      "payload": {
+        "source": "synthetic",
+        "position": 2
+      }
+    },
+    {
+      "kind": "sensor",
+      "id": "sensor-4",
+      "version": "v1",
+      "refs": [
+        "observation-3"
+      ],
+      "payload": {
+        "source": "synthetic",
+        "position": 3
+      }
+    }
+  ]
+}
