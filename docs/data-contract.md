@@ -5,5 +5,3 @@
 ## 已接收的协议资料
 现有入口接收 SensorThings 1.1 风格的 @iot.id、phenomenonTime、Datastream 导航地址和 @iot.nextLink。只保存页关系，不把一页当作完整站点；跨主机续页及版本一致性尚未实现。
 
-## 已接收的协议资料
-现有入口接收 SensorThings 1.1 风格的 @iot.id、phenomenonTime、Datastream 导航地址和 @iot.nextLink。只保存页关系，不把一页当作完整站点；跨主机续页及版本一致性尚未实现。
